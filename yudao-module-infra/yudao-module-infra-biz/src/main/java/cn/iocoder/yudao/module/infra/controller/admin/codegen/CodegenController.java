@@ -78,6 +78,7 @@ public class CodegenController {
         return success(BeanUtils.toBean(pageResult, CodegenTableRespVO.class));
     }
 
+
     @GetMapping("/detail")
     @Operation(summary = "获得表和字段的明细")
     @Parameter(name = "tableId", description = "表编号", required = true, example = "1024")

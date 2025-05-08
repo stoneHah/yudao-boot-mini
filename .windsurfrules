@@ -1,67 +1,60 @@
+你是芋道项目(yudao-boot-mini)的Java开发专家，精通Spring Boot、Spring Framework、Maven、MyBatis Plus和相关Java技术。
 
-You are an expert in Java programming, Spring Boot, Spring Framework, Maven, JUnit, and related Java technologies.
+代码风格与结构
+- 编写干净、高效且有良好文档的Java代码，提供准确的Spring Boot示例。
+- 在代码中遵循Spring Boot最佳实践和约定。
+- 创建Web服务时实现RESTful API设计模式。
+- 使用符合camelCase约定的描述性方法和变量名。
+- 按照芋道项目结构组织Spring Boot应用：controller、service、dal(mapper/po)、convert、enums等。
 
-Code Style and Structure
-- Write clean, efficient, and well-documented Java code with accurate Spring Boot examples.
-- Use Spring Boot best practices and conventions throughout your code.
-- Implement RESTful API design patterns when creating web services.
-- Use descriptive method and variable names following camelCase convention.
-- Structure Spring Boot applications: controllers, services, repositories, models, configurations.
+Spring Boot特性
+- 使用Spring Boot starter进行快速项目设置和依赖管理。
+- 正确使用注解（如@SpringBootApplication、@RestController、@Service）。
+- 有效利用Spring Boot的自动配置功能。
+- 使用@ControllerAdvice和@ExceptionHandler实现统一异常处理。
+- 遵循芋道项目的异常处理机制，使用ServiceException和ErrorCode。
 
-Spring Boot Specifics
-- Use Spring Boot starters for quick project setup and dependency management.
-- Implement proper use of annotations (e.g., @SpringBootApplication, @RestController, @Service).
-- Utilize Spring Boot's auto-configuration features effectively.
-- Implement proper exception handling using @ControllerAdvice and @ExceptionHandler.
+命名约定
+- 类名使用PascalCase（如UserController、OrderService）。
+- 方法和变量名使用camelCase（如findUserById、isOrderValid）。
+- 常量使用ALL_CAPS（如MAX_RETRY_ATTEMPTS、DEFAULT_PAGE_SIZE）。
+- 遵循芋道项目的命名规范，如DO、VO、DTO、BO等后缀。
 
-Naming Conventions
-- Use PascalCase for class names (e.g., UserController, OrderService).
-- Use camelCase for method and variable names (e.g., findUserById, isOrderValid).
-- Use ALL_CAPS for constants (e.g., MAX_RETRY_ATTEMPTS, DEFAULT_PAGE_SIZE).
+Java和Spring Boot使用
+- 根据项目版本使用相应的Java特性（Java 17版本使用records、sealed classes、pattern matching等）。
+- 充分利用Spring Boot 3.x特性和最佳实践。
+- 使用MyBatis Plus进行数据库操作，遵循芋道项目的数据访问层设计。
+- 使用Bean Validation（如@Valid、自定义验证器）实现参数校验。
+- 使用MapStruct进行对象转换，遵循芋道项目的convert层设计。
 
-Java and Spring Boot Usage
-- Use Java 17 or later features when applicable (e.g., records, sealed classes, pattern matching).
-- Leverage Spring Boot 3.x features and best practices.
-- Use Mybatis Plus for database operations when applicable.
-- Implement proper validation using Bean Validation (e.g., @Valid, custom validators).
+配置和属性
+- 使用application.properties或application.yml进行配置。
+- 使用Spring Profiles实现特定环境的配置。
+- 使用@ConfigurationProperties实现类型安全的配置属性。
+- 遵循芋道项目的配置管理方式，使用InfraProperties等配置类。
 
-Configuration and Properties
-- Use application.properties or application.yml for configuration.
-- Implement environment-specific configurations using Spring Profiles.
-- Use @ConfigurationProperties for type-safe configuration properties.
+依赖注入和IoC
+- 使用构造函数注入而非字段注入，以提高可测试性。
+- 利用Spring的IoC容器管理bean生命周期。
+- 遵循芋道项目的依赖注入风格。
 
-Dependency Injection and IoC
-- Use constructor injection over field injection for better testability.
-- Leverage Spring's IoC container for managing bean lifecycles.
+数据权限
+- 正确实现数据权限控制，使用相关注解和工具类。
 
-Performance and Scalability
-- Implement caching strategies using Spring Cache abstraction.
-- Use async processing with @Async for non-blocking operations.
-- Implement proper database indexing and query optimization.
+安全和认证
+- 遵循芋道项目的安全框架设计，正确使用SecurityUtils等工具类。
+- 正确实现认证和授权功能，遵循项目的安全最佳实践。
 
-Security
-- Implement Spring Security for authentication and authorization.
-- Use proper password encoding (e.g., BCrypt).
-- Implement CORS configuration when necessary.
+数据库操作
+- 使用MyBatis Plus进行数据库操作，遵循芋道项目的数据访问层设计。
+- 正确使用BaseMapperX和BaseDAOImpl等基类。
+- 遵循软删除、创建/更新时间等通用字段的处理方式。
 
-Logging and Monitoring
-- Use SLF4J with Logback for logging.
-- Implement proper log levels (ERROR, WARN, INFO, DEBUG).
-- Use Spring Boot Actuator for application monitoring and metrics.
+缓存使用
+- 正确使用Redis缓存，遵循芋道项目的缓存设计。
+- 使用RedisUtils等工具类进行缓存操作。
 
-API Documentation
-- Use Springdoc OpenAPI (formerly Swagger) for API documentation.
-
-
-Build and Deployment
-- Use Maven for dependency management and build processes.
-- Implement proper profiles for different environments (dev, test, prod).
-- Use Docker for containerization if applicable.
-
-Follow best practices for:
-- RESTful API design (proper use of HTTP methods, status codes, etc.).
-- Microservices architecture (if applicable).
-- Asynchronous processing using Spring's @Async or reactive programming with Spring WebFlux.
-
-Adhere to SOLID principles and maintain high cohesion and low coupling in your Spring Boot application design.
-    
+单元测试
+- 编写全面的单元测试，使用JUnit 5和Mockito。
+- 遵循芋道项目的测试规范和最佳实践。
+- 使用项目提供的测试基类和工具类。
